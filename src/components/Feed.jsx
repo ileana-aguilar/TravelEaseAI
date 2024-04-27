@@ -7,6 +7,8 @@ import { supabase} from "../../supabaseClient.js";
 
 const Feed = (props) => {
     const [posts, setPosts] = useState([]);
+    const [searchTitle, setSearchTitle] = useState('');
+    const [isAscending, setIsAscending] = useState(true);
 
     useEffect(() => {
         // eslint-disable-next-line react/prop-types
@@ -15,14 +17,20 @@ const Feed = (props) => {
             const {data} = await supabase
                 .from('Posts')
                 .select()
-                .order('created_at', { ascending: true })
+                .order('created_at', { ascending: isAscending })
 
             // set state of posts
             setPosts(data);
             console.log(data);
         }
         fetchPosts();
-    }, [props]);
+    }, [props, isAscending]);
+
+    // Filter posts based on search term
+    // Filter posts based on search term
+    const filteredPosts = posts ? posts.filter(post =>
+        post.Title.toLowerCase().includes(searchTitle.toLowerCase())
+    ) : [];
 
     return (
 
@@ -31,7 +39,9 @@ const Feed = (props) => {
             <div className='feed-header'>
             <div className="input-wrapper">
                 <IconSearch/>
-                <input type="text" placeholder="Search" className="search-input"></input>
+                <input type="text" placeholder="Search" className="search-input"
+                       onChange={event => setSearchTitle(event.target.value)}
+                />
                 </div>
             <Link to="/NewPost">
             <button className='new-post-button'>
@@ -45,12 +55,28 @@ const Feed = (props) => {
             </div>
             <div className='feed-heading'>
                 <h1>Feed</h1>
-                <button className='sort-button'>Sort</button>
+                <button className='sort-button' onClick={() => setIsAscending(!isAscending)}>Sort
+                    {isAscending ? (
+                    <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16.754 14.4766L10.8477 21.5078C10.7555 21.6175 10.6304 21.6792 10.4999 21.6792C10.3695 21.6792 10.2444 21.6175 10.1521 21.5078L4.24587 14.4766C4.15893 14.3655 4.1116 14.2186 4.11385 14.0668C4.1161 13.915 4.16775 13.7701 4.25793 13.6628C4.34811 13.5554 4.46976 13.4939 4.59727 13.4913C4.72478 13.4886 4.84819 13.5449 4.94149 13.6484L10.0077 19.6787V3.90625C10.0077 3.75085 10.0596 3.60181 10.1519 3.49193C10.2442 3.38204 10.3694 3.32031 10.4999 3.32031C10.6305 3.32031 10.7557 3.38204 10.848 3.49193C10.9403 3.60181 10.9921 3.75085 10.9921 3.90625V19.6787L16.0584 13.6484C16.1517 13.5449 16.2751 13.4886 16.4026 13.4913C16.5301 13.4939 16.6518 13.5554 16.7419 13.6628C16.8321 13.7701 16.8838 13.915 16.886 14.0668C16.8883 14.2186 16.8409 14.3655 16.754 14.4766Z"
+                            fill="#213547"/>
+                    </svg>
+                    ) : (
+                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.3497 9.98941C18.2486 10.086 18.1116 10.1402 17.9687 10.1402C17.8259 10.1402 17.6889 10.086 17.5878 9.98941L12.039 4.68277V18.5625C12.039 18.6993 11.9823 18.8304 11.8812 18.9271C11.7801 19.0238 11.6429 19.0782 11.5 19.0782C11.357 19.0782 11.2199 19.0238 11.1188 18.9271C11.0177 18.8304 10.9609 18.6993 10.9609 18.5625V4.68277L5.41217 9.98941C5.30998 10.0805 5.17482 10.1301 5.03517 10.1277C4.89551 10.1254 4.76227 10.0712 4.6635 9.97677C4.56474 9.8823 4.50816 9.75485 4.5057 9.62127C4.50324 9.48769 4.55507 9.35841 4.65029 9.26066L11.119 3.07316C11.2201 2.9766 11.3571 2.92236 11.5 2.92236C11.6428 2.92236 11.7798 2.9766 11.8809 3.07316L18.3497 9.26066C18.4506 9.35734 18.5073 9.48839 18.5073 9.62503C18.5073 9.76168 18.4506 9.89273 18.3497 9.98941Z"
+                            fill="#213547"/>
+                    </svg>
+                    )}
+                </button>
             </div>
             <div className='feed-card-grid'>
-                {posts && posts.map(post => (
-                    <Post className='post-card' key={post.id} id={post.id} created_at={post.created_at} Title={post.Title}
-                          Description={post.Description} Photo={post.Photo} user_id={post.user_id} CurrentLikeCount={post.LikeCount}/>
+                {filteredPosts && filteredPosts.map(post => (
+                    <Post className='post-card' key={post.id} id={post.id} created_at={post.created_at}
+                          Title={post.Title}
+                          Description={post.Description} Photo={post.Photo} user_id={post.user_id}
+                          CurrentLikeCount={post.LikeCount}/>
                 ))}
             </div>
 

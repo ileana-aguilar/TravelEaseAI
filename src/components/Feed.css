@@ -73,9 +73,15 @@
   }
 
   .sort-button{
-    width: 100px;
-    height: 49px;
-    border-radius: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 130px;
+      height: 49px;
+      border-radius: 25px;
+      gap:10px;
+
+
 }
 .feed-card-grid {
     display: flex;
