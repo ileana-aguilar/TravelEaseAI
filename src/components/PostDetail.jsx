@@ -211,7 +211,10 @@ const PostDetail = ({data}) => {
                 <h2>comments</h2>
                 <form className="comment-form" onSubmit={handleSubmit}>
                     <input className="comment-input" type='text' name='comment_text' placeholder='Add a comment' value={newComment.comment_text} onChange={handleChange} id="comment_text"/>
-                    <button className='post-comment-button' type="submit"> > </button>
+                    <button className='post-comment-button' type="submit"> <svg width="29" height="21" viewBox="0 0 29 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.6849 9.98324L8.91807 2.76244C8.88471 2.74342 8.84462 2.7316 8.8024 2.72834C8.76018 2.72508 8.71755 2.7305 8.6794 2.744C8.64124 2.75749 8.60912 2.7785 8.58672 2.80462C8.56431 2.83073 8.55254 2.86089 8.55274 2.89164V4.47689C8.55274 4.57738 8.61787 4.67377 8.72549 4.73529L18.9208 10.5L8.72549 16.2648C8.61504 16.3263 8.55274 16.4227 8.55274 16.5232V18.1084C8.55274 18.2458 8.7708 18.3217 8.91807 18.2376L21.6849 11.0168C21.7934 10.9555 21.8812 10.8771 21.9415 10.7876C22.0019 10.698 22.0333 10.5997 22.0333 10.5C22.0333 10.4004 22.0019 10.302 21.9415 10.2125C21.8812 10.1229 21.7934 10.0445 21.6849 9.98324Z" fill="#213547"/>
+</svg>
+ </button>
                 </form>
                 {comments && comments.map(comment => (
                     <Comment key={comment.id} comment_id={comment.id} comment_text={comment.comment_text} created_at={comment.created_at} user_id={comment.user_id} post_id={comment.post_id}/>
