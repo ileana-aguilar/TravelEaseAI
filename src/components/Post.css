@@ -1,0 +1,75 @@
+.feed-card-container{
+    width:300px;
+    height:480px;
+    overflow: hidden;
+    background-color: var(--white);
+    border-radius: 15px;
+}
+
+.feed-card-container:hover{
+    background-color: var(--light-gray);
+}
+
+.feed-card-pic{
+    width:300px;
+    height: 350px;
+
+    
+}
+
+.feed-card-pic img {
+    width: 100%;    /* Make the image take up the full width of the div */
+    height: 100%;   /* Make the image take up the full height of the div */
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.feed-post-info {
+    display: flex;
+    align-items: center; /* Optional: Aligns items vertically in the center */
+    justify-content: space-between; /* Optional: Adds space between the items */
+    height: 60px; /* Set a specific height if needed */
+    gap: 5px; /* Optional: adds space between grid items */
+    margin: 0;
+}
+
+
+
+.feed-post-time{
+    font-size: 0.8em;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+
+
+.feed-post-title{
+    margin-top: 4px;
+    margin-bottom: 0;
+
+}
+
+.feed-post-info .feed-user-info {
+    display: flex;         /* Make it a flex container */
+    align-items: center;   /* Center content vertically */
+    gap: 8px;              /* Space between the icon and text */
+    font-size: 0.01em;      /* Smaller font size */
+    margin: 0;
+}
+
+
+.feed-post-info .like-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--white);
+    font-size: 0.9em;
+    width: 200px;
+    padding: 0;
+}
+
+
+
+

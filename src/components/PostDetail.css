@@ -1,0 +1,93 @@
+.post-detail-container{
+    align-items: center;
+    width: 600px;
+    height: 100vh;
+    margin-top: 30px;
+}
+
+.feed-user-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 10px;
+}
+
+.post-detail-pic{
+    width:600px;
+    height: 750px;
+    background: var(--light-gray);
+}
+
+.post-detail-pic img{
+    width: 100%;    /* Make the image take up the full width of the div */
+    height: 100%;   /* Make the image take up the full height of the div */
+    object-fit: contain;
+
+}
+
+.like-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--white);
+}
+
+.comment-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--white);
+}
+
+.post-detail-counts {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.comment-input{
+    border: none;
+    outline: none;
+    width: 400px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--light-gray);
+}
+
+.comment-form{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.new-comment-button{
+    background-color: var(--white);
+    margin-top: 5px;
+}
+
+.post-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.mange-post-buttons{
+    display: flex;
+    justify-items: flex-end;
+    gap:4px;
+
+}
+
+.edit-button{
+    background-color: var(--white);
+    margin-top: 5px;
+}
+
+.delete-button{
+    background-color: var(--white);
+    margin-top: 5px;
+    color:var(--red);
+}

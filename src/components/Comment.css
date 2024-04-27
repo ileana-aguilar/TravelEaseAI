@@ -1,0 +1,24 @@
+.comment-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+.comment-info{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+
+}
+.comment-user{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.comment-text{
+    margin-top: -15px;
+    margin-left: 50px;
+}

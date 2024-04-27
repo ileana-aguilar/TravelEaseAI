@@ -1,0 +1,110 @@
+.new-post-container{
+    margin-top: 50px;
+    align-items: left;
+}
+.new-post-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid var(--dark-gray);
+    width: 200px;
+    height: 250px;
+
+}
+.new-post-title{
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--white);
+    padding: 5px;
+    border-radius: 5px;
+    /*background-color: #fbfbfb;
+    border: 1px solid #fbfbfb;*/
+   background-color: var(--white);
+    width: 600px;
+    margin-top: 50px;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: var(--dark-blue);
+}
+
+.new-post-description{
+    display: flex;
+    align-items: top;
+    border: 1px solid var(--white);
+    /*border: 1px solid #fbfbfb;*/
+    border-radius: 5px;
+    padding: 5px;
+    /*background-color: #fbfbfb;*/
+    background-color: var(--white);
+    width: 600px;
+    height: 700px;
+    resize: none;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--dark-blue);
+}
+
+.new-post-title input::placeholder{
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 1.5;
+    color: var(--dark-gray);
+}
+
+.new-post-description textarea::placeholder {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--dark-gray);
+}
+
+.post-button{
+    width: 100%;
+    background-color: var(--dark-purple);
+    color: var(--white);
+}
+
+.new-post-photo-preview{
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap:10px;
+    width: 200px;
+    height: 250px;
+    border-radius: 5px;
+    /*border: 2px solid var(--dark-gray);
+    background-color: var(--light-gray);*/
+}
+
+.new-post-photo{
+    cursor: pointer;
+}
+
+.new-post-photo label{
+    cursor: pointer;
+}
+
+.new-post-photo-preview button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--white);
+}
+
+.uploaded-photo{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.new-post-photo-input{
+    display: flex;
+    align-items: center; /* Optional: Aligns items vertically in the center */
+    gap:10px;
+}

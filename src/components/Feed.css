@@ -1,0 +1,100 @@
+.feed-container{
+    align-items: center;
+    width: 100%;
+}
+
+.feed-header{
+    display: flex;
+    justify-content: space-between; /* Aligns children to each side of the container */
+    align-items: center; /* Centers items vertically */
+    padding: 10px 20px; /* Adds some padding around the content */
+    padding-left: 0px;
+    width: 100%;
+}
+
+.feed-heading{
+    display: flex;
+    justify-content: space-between; /* Aligns children to each side of the container */
+    align-items: center; /* Centers items vertically */
+    width: 100%;
+}
+
+.feed-heading h1{
+    font-weight: 400;
+    font-size: 45px;
+}
+
+.new-post-button{
+    background-color: var(--dark-purple);
+    color: var(--white);
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: center; /* Centers items horizontally */
+    gap: 10px; /* Space between the text and the SVG */
+    padding: 10px 20px; /* Padding around content inside the button */
+    border: none;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.new-post-button svg{
+    width: 25px;
+    height: 25px;
+    margin-top: -3px; /* Moves the SVG up by 2px */
+    
+}
+
+.new-post-button:hover{
+    background-color: #703383;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--light-gray);
+    border-radius: 15px;
+    padding: 5px;
+    background-color: var(--light-gray);
+    width: 300px;
+    gap: 10px;
+  }
+  
+  .input-icon {
+    margin-right: 5px;
+  }
+  
+  .search-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: var(--light-gray);
+  }
+
+  .sort-button{
+    width: 100px;
+    height: 49px;
+    border-radius: 25px;
+}
+.feed-card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px /* Optional: Adds some space between the posts */
+}
+
+.post-card {
+    flex: 1 0 21%; /* This means that each post will take up approximately 21% of the row width. Adjust this value as needed. */
+    margin: 0.5%; /* Optional: Adds some margin around each post */
+}
+
+@media (max-width: 600px) {
+    .feed-header {
+        flex-direction: column;
+    }
+
+    .new-post-button, .input-wrapper {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 10px; /* Adds space between elements */
+    }
+}
