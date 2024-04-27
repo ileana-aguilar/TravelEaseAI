@@ -2,14 +2,14 @@
 TravelEase provide users to the ability to share their recent travels with other user. 
 
 **The following **required** functionality is completed:**
-[x] Users can go to a create form that allows the user to create posts
-[x] There is a home feed displaying previously created posts
-[x] Users can view posts in different ways
-[x] Users can interact with each post in different ways
-[x] A post that a user previously created can be edited or deleted from its post page
+- [x] Users can go to a create form that allows the user to create posts
+- [x] There is a home feed displaying previously created posts
+- [x] Users can view posts in different ways
+- [x] Users can interact with each post in different ways
+- [x] A post that a user previously created can be edited or deleted from its post page
 
 **The following **optional** functionality are implemented:**
-[x] Website implements pseudo-authentication
+- [x] Website implements pseudo-authentication
 
 
 # Here's how TravelEase looks:
