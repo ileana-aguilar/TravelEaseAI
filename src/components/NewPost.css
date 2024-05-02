@@ -105,6 +105,6 @@
 
 .new-post-photo-input{
     display: flex;
-    align-items: center; /* Optional: Aligns items vertically in the center */
+    align-items: center;
     gap:10px;
 }

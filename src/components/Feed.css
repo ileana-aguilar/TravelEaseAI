@@ -5,17 +5,17 @@
 
 .feed-header{
     display: flex;
-    justify-content: space-between; /* Aligns children to each side of the container */
-    align-items: center; /* Centers items vertically */
-    padding: 10px 20px; /* Adds some padding around the content */
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px; 
     padding-left: 0px;
     width: 100%;
 }
 
 .feed-heading{
     display: flex;
-    justify-content: space-between; /* Aligns children to each side of the container */
-    align-items: center; /* Centers items vertically */
+    justify-content: space-between; 
+    align-items: center; 
     width: 100%;
 }
 
@@ -28,10 +28,10 @@
     background-color: var(--dark-purple);
     color: var(--white);
     display: flex;
-    align-items: center; /* Aligns items vertically in the center */
-    justify-content: center; /* Centers items horizontally */
-    gap: 10px; /* Space between the text and the SVG */
-    padding: 10px 20px; /* Padding around content inside the button */
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
+    padding: 10px 20px; 
     border: none;
     width: 200px;
     height: 40px;
@@ -42,7 +42,7 @@
 .new-post-button svg{
     width: 25px;
     height: 25px;
-    margin-top: -3px; /* Moves the SVG up by 2px */
+    margin-top: -3px; 
     
 }
 
@@ -86,12 +86,12 @@
 .feed-card-grid {
     display: flex;
     flex-wrap: wrap;
-    gap:10px /* Optional: Adds some space between the posts */
+    gap:10px 
 }
 
 .post-card {
-    flex: 1 0 21%; /* This means that each post will take up approximately 21% of the row width. Adjust this value as needed. */
-    margin: 0.5%; /* Optional: Adds some margin around each post */
+    flex: 1 0 21%; 
+    margin: 0.5%; 
 }
 
 @media (max-width: 600px) {
@@ -100,7 +100,7 @@
     }
 
     .new-post-button, .input-wrapper {
-        width: 100%; /* Full width on smaller screens */
-        margin-bottom: 10px; /* Adds space between elements */
+        width: 100%; 
+        margin-bottom: 10px; 
     }
 }

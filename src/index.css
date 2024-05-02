@@ -30,13 +30,13 @@
   min-height: 100vh;
   height: 100%;
   /*display: grid;
-  grid-template-columns: 200px 1fr; /* Adjust the width as necessary */
+  grid-template-columns: 200px 1fr; 
   /*height: 100vh;*/
 }
 
 .sidebar {
   min-width: 304px;
-  max-width: 400px; /* or whatever width you prefer */
+  max-width: 400px; 
   background-color: var(--light-purple);
   /*height: 100%;
     width: 30%;
@@ -56,8 +56,8 @@
 
 
 .main-content {
-  flex-grow: 1; /* Takes up the remaining space */
-    padding: 20px; /* Example padding */
+  flex-grow: 1; 
+    padding: 20px; 
     width: 100%;
     margin-left: 5em
   /*grid-column: 2 / 3;

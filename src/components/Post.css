@@ -18,18 +18,18 @@
 }
 
 .feed-card-pic img {
-    width: 100%;    /* Make the image take up the full width of the div */
-    height: 100%;   /* Make the image take up the full height of the div */
+    width: 100%;    
+    height: 100%;   
     object-fit: cover;
     border-radius: 15px;
 }
 
 .feed-post-info {
     display: flex;
-    align-items: center; /* Optional: Aligns items vertically in the center */
-    justify-content: space-between; /* Optional: Adds space between the items */
-    height: 60px; /* Set a specific height if needed */
-    gap: 5px; /* Optional: adds space between grid items */
+    align-items: center; 
+    justify-content: space-between; 
+    height: 60px; 
+    gap: 5px; 
     margin: 0;
 }
 
@@ -51,10 +51,10 @@
 }
 
 .feed-post-info .feed-user-info {
-    display: flex;         /* Make it a flex container */
-    align-items: center;   /* Center content vertically */
-    gap: 8px;              /* Space between the icon and text */
-    font-size: 0.01em;      /* Smaller font size */
+    display: flex;        
+    align-items: center;  
+    gap: 8px;              
+    font-size: 0.01em;     
     margin: 0;
 }
 

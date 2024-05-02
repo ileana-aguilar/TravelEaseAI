@@ -16,11 +16,9 @@ TravelEase provide users to the ability to share their recent travels with other
 
 <div>
     <a href="https://www.loom.com/share/6839227b01d146fbb6459f1e1130d58c?sid=0263a1d7-e8d9-4684-bc71-f7b9205c42d3">
-      <p>Library | Loom - 27 April 2024 - Watch Video</p>
+      <p> TravelEase Demo - Watch Video</p>
     </a>
-    <a href="https://www.loom.com/share/6839227b01d146fbb6459f1e1130d58c?sid=0263a1d7-e8d9-4684-bc71-f7b9205c42d3">
-      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/6839227b01d146fbb6459f1e1130d58c?sid=0263a1d7-e8d9-4684-bc71-f7b9205c42d3-with-play.gif">
-    </a>
+   
   </div>
 
 # Getting started

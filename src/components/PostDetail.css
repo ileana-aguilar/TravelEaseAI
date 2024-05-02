@@ -19,8 +19,8 @@
 }
 
 .post-detail-pic img{
-    width: 100%;    /* Make the image take up the full width of the div */
-    height: 100%;   /* Make the image take up the full height of the div */
+    width: 100%;    
+    height: 100%;  
     object-fit: contain;
 
 }
