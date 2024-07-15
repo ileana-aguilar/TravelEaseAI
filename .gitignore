@@ -28,4 +28,4 @@ node_modules/
 *.sw?
 
 # Supabase client
-supabaseClient.js
+supabaseClientcopy.js
