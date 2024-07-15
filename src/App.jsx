@@ -4,6 +4,7 @@ import FeedView from './routes/FeedView.jsx';
 import { supabase } from '../supabaseClient';
 import { Auth } from '@supabase/auth-ui-react';
 import { ThemeSupa } from '@supabase/auth-ui-shared';
+import logo from './assets/IMG_5079.png';
 
 function App() {
     const [userId, setUserId] = useState('');
@@ -57,9 +58,10 @@ function App() {
             {isLoggedIn && !loading ? (
                 <FeedView userid={userId} />
             ) : (
+                
                 <div className="app-container">
                     <div className="sidebar">
-                        <img className="logo" src='src/assets/IMG_5079.png' width='300px' alt="Travel Ease Logo" />
+                        <img className="logo" src={logo} width="300px" alt="Travel Ease Logo" />
                     </div>
                     <div className="authentication-main-content">
                         <div className='authentication'>
