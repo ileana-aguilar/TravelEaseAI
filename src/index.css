@@ -96,6 +96,22 @@
   margin-left: 3.5em;*/
 }
 
+.authentication-main-content {
+  flex-grow: 1; 
+    width: 100%;
+    width: 100vh;
+    margin-top: 3em;
+    margin-left: 25em;
+    margin-right: 2em;
+  
+  /*grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  margin-left: 3.5em;*/
+}
+
 a {
   font-weight: 500;
   color: var(--dark-blue);

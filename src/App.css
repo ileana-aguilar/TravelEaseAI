@@ -8,6 +8,16 @@ min-width: 100vh;
   /*text-align: center;*/
 }
 
+.authentication {
+  display: block;
+  justify-content: center;
+  align-items: start;
+  min-width: 15em;
+  max-width: 40em;
+  margin: 0 auto;
+  height: 100vh;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

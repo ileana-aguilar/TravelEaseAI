@@ -61,26 +61,28 @@ function App() {
                     <div className="sidebar">
                         <img className="logo" src='src/assets/IMG_5079.png' width='300px' alt="Travel Ease Logo" />
                     </div>
-                    <div className="main-content">
-                        <Auth
-                            supabaseClient={supabase}
-                            providers={[]}
-                            appearance={{
-                                theme: ThemeSupa,
-                                variables: {
-                                    default: {
-                                        colors: {
-                                            brand: 'var(--dark-purple)',
-                                            brandAccent: 'var(--dark-purple)',
-                                        },
-                                        radii: {
-                                            borderRadiusButton: '15px',
-                                            inputBorderRadius: '15px'
+                    <div className="authentication-main-content">
+                        <div className='authentication'>
+                            <Auth
+                                supabaseClient={supabase}
+                                providers={[]}
+                                appearance={{
+                                    theme: ThemeSupa,
+                                    variables: {
+                                        default: {
+                                            colors: {
+                                                brand: 'var(--dark-purple)',
+                                                brandAccent: 'var(--dark-purple)',
+                                            },
+                                            radii: {
+                                                borderRadiusButton: '15px',
+                                                inputBorderRadius: '15px'
+                                            },
                                         },
                                     },
-                                },
-                            }}
-                        />
+                                }}
+                            />
+                        </div>
                     </div>
                 </div>
             )}
