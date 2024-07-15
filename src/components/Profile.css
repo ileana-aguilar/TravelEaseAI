@@ -1,0 +1,108 @@
+.profile-header {
+    display: flex;
+    align-items: start; /* Align items to the top */
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+.user-icon {
+    /* Align the icon to the left */
+    float: left;
+    margin-right: 10px; /* Add some space between the icon and the text */
+}
+
+.user-info {
+    /* Use flexbox for layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    margin-left: 3rem;
+    text-align: left;
+}
+
+.user-details {
+    /* Align items in a row */
+    display: flex;
+    gap: 20px; /* Add some space between items */
+    margin-top: -2.5rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.user-stats{
+    display: flex;
+    gap: 40px;
+    align-items: flex-start; /* Align items to the left */
+    margin-left: 0;
+}
+
+.icon-feed {
+    position: relative;
+    top: 100px;
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* If there are too many tabs to fit on one line, they will wrap to the next line */
+    border-top: 1px solid var(--light-mid-gray); 
+    margin-bottom: 2em;
+    
+}
+
+.tabs-container ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+
+.tabs-container ul li {
+    margin-right: 40px; /* Adjust the value as needed */
+}
+
+.tab-link {
+    margin-right: 50px; /* Add some space to the right of each link */
+    text-decoration: none; /* Optional: remove the underline */
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: flex-start; 
+    text-align: left;
+    list-style: none;
+}
+
+.tab-link a {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    margin-top: 15px;
+}
+
+.tabs-container ul li:hover span {
+    color: black; /* Change text color to black on hover */
+}
+
+.tabs-container ul li:hover svg path {
+    fill: black; /* Change icon fill color to black on hover */
+}
+
+
+.tabs-container ul li.active-tab span {
+    color: black;
+}
+.tabs-container ul li span {
+    color: var(--light-mid-gray);
+}
+.active-tab {
+    border-top: 2px solid #000; /* Adjust as needed */
+}
+
+.profile-feed-card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px 
+}
+
+.post-card {
+    flex: 1 0 21%; 
+    margin: 0.5%; 
+}

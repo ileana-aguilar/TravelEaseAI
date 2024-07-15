@@ -1,0 +1,92 @@
+/* Calendar1.css */
+
+/* Example CSS */
+.react-calendar {
+  border: none;
+  font-family: Arial, sans-serif;
+  height: 293px; /* Adjust height to fit 5 rows */
+  overflow: hidden; /* Hide the 6th row */
+}
+
+/* Uniform color for every number in the calendar */
+.react-calendar__tile {
+  color: #000000; /* Replace with your desired color */
+  border-radius: 4em;
+}
+
+/* Active tile styling */
+.react-calendar__tile--active {
+  background: var(--light-purple);
+  color: rgb(0, 0, 0);
+  border-radius: 0;
+  
+}
+
+/* Show two months side by side */
+.react-calendar__viewContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Style for selected dates */
+.react-calendar__tile--rangeStart,
+.react-calendar__tile--rangeEnd,
+.react-calendar__tile--rangeBothEnds {
+  background: var(--dark-purple);
+  color: var(--white);
+  border-radius: 4em;
+}
+
+
+
+/* Abbreviate days of the week */
+.react-calendar__month-view__weekdays__weekday {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Add a line under the day of the week row */
+.react-calendar__month-view__weekdays {
+  border-bottom: 1px solid var(--light-mid-gray); 
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none;
+}
+
+/* Display the name of the month on top of each calendar */
+.react-calendar__navigation__label {
+  font-size: 1em; 
+  font-weight: bold; 
+  margin-bottom: 10px; 
+}
+
+/* Remove the yellow circle around today's date */
+.react-calendar__tile--now {
+  background: none !important;
+  color: inherit !important;
+}
+
+/* Highlight today's date when active */
+.react-calendar__tile--now.react-calendar__tile--active {
+  background: var(--dark-purple) !important;
+  color: var(--white) !important;
+  border-radius: 4em;
+}
+
+/* Highlight today's date on hover */
+.react-calendar__tile--now:hover {
+  background: #ccc !important;
+  color: inherit !important;
+  border-radius: 4em;
+}
+
+/* Remove the gray circle around disabled dates */
+.disabled-tile {
+  pointer-events: none; /* Disable clicking */
+  opacity: 0.5; /* Reduce opacity to indicate disabled */
+  background: none !important; /* Remove background */
+  color: #ccc !important; /* Set a lighter color */
+}

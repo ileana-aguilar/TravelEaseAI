@@ -2,17 +2,18 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import NewPost from '../components/NewPost';
 import '../index.css';
+import GenerateItineraryForm from '../components/GenerateItineraryForm';
 
-function NewPostView(){
+function GenerateItineraryView(){
     return(
         <div className="app-container">
         <div className="sidebar">
             <Navbar/>
         </div>
-        <div className="main-content">
-            <NewPost/>
+        <div className="form-main-content">
+            <GenerateItineraryForm/>
         </div>
         </div>
     )
 }
-export default NewPostView;
+export default GenerateItineraryView;

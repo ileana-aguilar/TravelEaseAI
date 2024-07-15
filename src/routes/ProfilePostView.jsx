@@ -1,18 +1,18 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import NewPost from '../components/NewPost';
+import ProfilePosts from '../components/ProfilePosts';
 import '../index.css';
 
-function NewPostView(){
+function ProfilePostView(){
     return(
         <div className="app-container">
         <div className="sidebar">
-            <Navbar/>
+            <Navbar />
         </div>
         <div className="main-content">
-            <NewPost/>
+            <ProfilePosts/>
         </div>
         </div>
     )
 }
-export default NewPostView;
+export default ProfilePostView;

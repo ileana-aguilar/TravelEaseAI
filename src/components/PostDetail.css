@@ -1,3 +1,8 @@
+.post-detail-div{
+    display: flex;
+    justify-content: center;
+
+}
 .post-detail-container{
     align-items: center;
     width: 600px;
@@ -65,6 +70,14 @@
 .new-comment-button{
     background-color: var(--white);
     margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.comment-count {
+    position: relative;
+    top: -2px;
 }
 
 .post-detail-header {

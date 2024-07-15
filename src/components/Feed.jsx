@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { Outlet, Link } from "react-router-dom";
 import './Feed.css';
 import IconSearch from '../assets/IconSearch';
-import Post from './Post';
+import Post from './Post.jsx';
 import { supabase} from "../../supabaseClient.js";
 
 const Feed = (props) => {
@@ -11,7 +11,7 @@ const Feed = (props) => {
     const [isAscending, setIsAscending] = useState(true);
 
     useEffect(() => {
-        // eslint-disable-next-line react/prop-types
+        
         setPosts(props.data);
         const fetchPosts = async () => {
             const {data} = await supabase
@@ -27,7 +27,6 @@ const Feed = (props) => {
     }, [props, isAscending]);
 
     // Filter posts based on search term
-    // Filter posts based on search term
     const filteredPosts = posts ? posts.filter(post =>
         post.Title.toLowerCase().includes(searchTitle.toLowerCase())
     ) : [];
@@ -37,11 +36,11 @@ const Feed = (props) => {
         
         <div className='feed-container'>
             <div className='feed-header'>
-            <div className="input-wrapper">
-                <IconSearch/>
-                <input type="text" placeholder="Search" className="search-input"
-                       onChange={event => setSearchTitle(event.target.value)}
-                />
+                <div className="input-wrapper">
+                    <IconSearch/>
+                    <input type="text" placeholder="Search" className="search-input"
+                        onChange={event => setSearchTitle(event.target.value)}
+                    />
                 </div>
             <Link to="/NewPost">
             <button className='new-post-button'>
