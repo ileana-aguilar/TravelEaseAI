@@ -18,6 +18,12 @@
 
 }
 
+.comment-user:hover{
+    color: var(--dark-blue);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .comment-text{
     margin-top: -15px;
     margin-left: 50px;

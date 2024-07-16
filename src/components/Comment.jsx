@@ -3,6 +3,7 @@ import {supabase} from "../../supabaseClient.js";
 import IconCircle from "../assets/IconCircle.jsx";
 import {formatDistanceToNow} from "date-fns";
 import './Comment.css';
+import {Link} from "react-router-dom";
 
 const Comment = ({comment_text, user_id, created_at}) => {
 
@@ -16,7 +17,9 @@ const Comment = ({comment_text, user_id, created_at}) => {
     return (
         <div className='comment-container'>
             <div className='comment-info'>
-                <span className='comment-user' >  <IconCircle size={40} aria-label="User profile"/>@{user_id}</span>
+                <Link to={'/Profile/Posts/' + user_id}>
+                    <span className='comment-user' >  <IconCircle size={40} aria-label="User profile"/>@{user_id}</span>
+                </Link>
                 <time dateTime={created_at}>{timeAgo}</time>
             </div>
             <div className='comment-text'>

@@ -173,8 +173,11 @@ const PostDetail = ({data}) => {
         <div className="post-detail-div">
         <article className="post-detail-container">
             <div className="post-detail-header">
-                <span className='feed-user-info'><IconCircle size={40}
-                                                             aria-label="User profile"/>{"@" + post.user_id}</span>
+                <Link to={'/Profile/Posts/' + post.user_id}>
+                    <span className='feed-user-info'>
+                        <IconCircle size={40} aria-label="User profile"/>{"@" + post.user_id}
+                        </span>
+                </Link>
                 {userId === post.user_id && (
                 <div className="mange-post-buttons">
                     <Link to={`/Feed/PostDetail/${post.id}/Update`}>
