@@ -4,12 +4,14 @@ import './NewPost.css';
 import HorizontalLine from '../assets/HorizontalLine';
 import { v4 as uuidv4 } from 'uuid';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const UpdatePost = () => {
     const { id } = useParams();
     const[currentPost, setCurrentPost] = useState({id: null, created_at: "", Title:"", Description:"", Photo:"", user_id:"", LikeCount:""});
     const [media, setMedia] = useState([]);
     const randFileName = uuidv4();
+    const navigate = useNavigate();
 
     const[post, setPost] = useState({Photo: "", Title:"", Description:"", user_id: ""});
     
@@ -101,7 +103,7 @@ const UpdatePost = () => {
             console.error('Error updating post:', error);
         } else {
             console.log('Post updated:', data);
-            window.location = "/Feed"; // Redirect after successful update
+            navigate("/Feed"); // Redirect after successful update
         }
     }
 

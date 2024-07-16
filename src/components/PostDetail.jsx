@@ -10,6 +10,7 @@ import Post from "./Post.jsx";
 import Comment from "./Comment.jsx";
 import {Link} from "react-router-dom";
 import IconComment from "../assets/IconComment.jsx";
+import { useNavigate } from 'react-router-dom';
 
 
 const PostDetail = ({data}) => {
@@ -22,6 +23,7 @@ const PostDetail = ({data}) => {
     const [comments, setComments] = useState([]);
     const [userId, setUserId] = useState(null);
     const commentCount = comments.length;
+    const navigate = useNavigate();
 
     //get user id currently logged in
     const getUser = async () => {
@@ -139,7 +141,7 @@ const PostDetail = ({data}) => {
         } else {
             console.log("Data inserted successfully: ", data);
             setNewComment(prev => ({...prev, comment_text: ""})); // Clear the input field
-            window.location.reload() // Redirect on success
+            navigate(0); // Reload on success
         }
     };
 
@@ -159,7 +161,7 @@ const PostDetail = ({data}) => {
             .delete()
             .eq('id', id);
 
-        window.location = "/Feed";
+            navigate("/Feed"); // Redirect on success
     };
 
 

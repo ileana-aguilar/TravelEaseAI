@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../../supabaseClient';
 import './NewPost.css';
-import HorizontalLine from '../assets/HorizontalLine';
 import { v4 as uuidv4 } from 'uuid';
+import { useNavigate } from 'react-router-dom';
 
 
 const NewPost = () => {
     const [userId, setUserId] = useState(null);
     const [media, setMedia] = useState([]);
     const randFileName = uuidv4();
+    const navigate = useNavigate();
 
 
     const[post, setPost] = useState({Photo: "", Title:"", Description:"", user_id: ""});
@@ -71,7 +72,7 @@ const NewPost = () => {
             console.error("Error inserting data: ", error);
         } else {
             console.log("Data inserted successfully: ", data);
-            window.location = "/Feed"; // Redirect on success
+            navigate("/Feed"); // Redirect on success
         }
     };
 
@@ -86,10 +87,17 @@ const NewPost = () => {
 
     const deletePhoto = async (event) => {
         event.preventDefault();
-        await supabase.storage
+        const path = `${userId}/${media.name}`;
+        const { data, error } = await supabase.storage
             .from('ImageUpload')
-            .remove(media.url);
-        window.reload();
+            .remove([path]);
+
+        if (error) {
+            console.error('Error deleting photo:', error);
+        } else {
+            console.log('Photo deleted:', data);
+            setMedia([]);
+        }
     };
 
     return(
@@ -99,7 +107,8 @@ const NewPost = () => {
                 <div className='new-post-photo-input'>
                     {media.url ? (
                      <div type="button" className='new-post-photo-preview'>
-                        <button onChange={deletePhoto}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <button type='button' onClick={deletePhoto}>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M7.615 20C7.16833 20 6.78733 19.8427 6.472 19.528C6.15733 19.2133 6 18.8323 6 18.385V6.00001H5V5.00001H9V4.23001H15V5.00001H19V6.00001H18V18.385C18 18.845 17.846 19.229 17.538 19.537C17.23 19.845 16.8457 19.9993 16.385 20H7.615ZM17 6.00001H7V18.385C7 18.5643 7.05767 18.7117 7.173 18.827C7.28833 18.9423 7.43567 19 7.615 19H16.385C16.5383 19 16.6793 18.936 16.808 18.808C16.9367 18.68 17.0007 18.539 17 18.385V6.00001ZM9.808 17H10.808V8.00001H9.808V17ZM13.192 17H14.192V8.00001H13.192V17Z"
                                 fill="#939393"/>
