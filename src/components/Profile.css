@@ -1,28 +1,25 @@
 .profile-header {
     display: flex;
-    align-items: start; /* Align items to the top */
+    align-items: start;
     margin-top: 2rem;
     margin-bottom: 3rem;
 }
 .user-icon {
-    /* Align the icon to the left */
     float: left;
-    margin-right: 10px; /* Add some space between the icon and the text */
+    margin-right: 10px; 
 }
 
-.profile-user-info {
-    /* Use flexbox for layout */
+.profile-user-info { 
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the left */
+    align-items: flex-start; 
     margin-left: 3rem;
     text-align: left;
 }
 
 .user-details {
-    /* Align items in a row */
     display: flex;
-    gap: 20px; /* Add some space between items */
+    gap: 20px; 
     margin-top: -2.5rem;
     margin-bottom: 2rem;
     align-items: center;
@@ -31,7 +28,7 @@
 .user-stats{
     display: flex;
     gap: 40px;
-    align-items: flex-start; /* Align items to the left */
+    align-items: flex-start; 
     margin-left: 0;
 }
 
@@ -43,7 +40,7 @@
 .tabs-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* If there are too many tabs to fit on one line, they will wrap to the next line */
+    flex-wrap: wrap; 
     border-top: 1px solid var(--light-mid-gray); 
     margin-bottom: 2em;
     
@@ -56,12 +53,12 @@
 }
 
 .tabs-container ul li {
-    margin-right: 40px; /* Adjust the value as needed */
+    margin-right: 40px; 
 }
 
 .tab-link {
-    margin-right: 50px; /* Add some space to the right of each link */
-    text-decoration: none; /* Optional: remove the underline */
+    margin-right: 50px; 
+    text-decoration: none; 
     display: flex;
     flex-direction: row; 
     align-items: center; 
@@ -78,11 +75,11 @@
 }
 
 .tabs-container ul li:hover span {
-    color: black; /* Change text color to black on hover */
+    color: black; 
 }
 
 .tabs-container ul li:hover svg path {
-    fill: black; /* Change icon fill color to black on hover */
+    fill: black; 
 }
 
 
@@ -93,7 +90,7 @@
     color: var(--light-mid-gray);
 }
 .active-tab {
-    border-top: 2px solid #000; /* Adjust as needed */
+    border-top: 2px solid #000; 
 }
 
 .profile-feed-card-grid {
