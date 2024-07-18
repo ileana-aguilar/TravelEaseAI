@@ -11,6 +11,7 @@ const Comment = ({ comment_id, comment_text, user_id, created_at, post_id, updat
     const [isHovered, setIsHovered] = useState(false);
     const [showMoreOptions, setShowMoreOptions] = useState(false);
     const [loggedInUserId, setLoggedInUserId] = useState(null);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -25,6 +26,10 @@ const Comment = ({ comment_id, comment_text, user_id, created_at, post_id, updat
             }
         };
         getUser();
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     let timeAgo = '';
@@ -54,6 +59,9 @@ const Comment = ({ comment_id, comment_text, user_id, created_at, post_id, updat
         console.log('Report button clicked');
     };
 
+    const fillColor = windowWidth >= 1024 ? (isHovered ? "#213547" : "var(--white)") : "#213547";
+console.log(windowWidth)
+    console.log(fillColor)
     return (
         <div className='comment-container' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
             <div className='comment-info'>
@@ -62,7 +70,7 @@ const Comment = ({ comment_id, comment_text, user_id, created_at, post_id, updat
                 </Link>
                 <time dateTime={created_at}>{timeAgo}</time>
                 <button type="button" className="more-info" onClick={handleMoreInfoClick}>
-                    <IconMoreInfo size={20} fillColor={isHovered ? "#213547" : "var(--white)"} />
+                    <IconMoreInfo size={20} fillColor={fillColor} />
                 </button>
                 {showMoreOptions && (
                     loggedInUserId === user_id ? (

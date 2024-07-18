@@ -92,3 +92,9 @@ span.feed-user-info:hover {
     color: var(--dark-blue);
     text-decoration: underline;
 }
+
+@media (max-width: 430px) {
+    .overlay2{
+        display: none;
+    }
+}

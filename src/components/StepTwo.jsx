@@ -99,6 +99,7 @@ const StepTwo = ({ formData, handleChange, handleNext, handleBack }) => {
     console.log('StepTwo', formData.lengthOfStay);
 
   return (
+    <div className='step-two'>
     <form onSubmit={(e) => { e.preventDefault(); handleNext(); }} className='form'>
         <div className='itineray-header'>
             <h2>{formData.destination} Itineray</h2>
@@ -142,19 +143,19 @@ const StepTwo = ({ formData, handleChange, handleNext, handleBack }) => {
             </div>
         )}
         {!isFlexible && (
-       <div className='calendar-div'>
-       <Calendar
-                onChange={handleDateChange}
-                value={dateRange}
-                selectRange={true}
-                tileDisabled={tileDisabled}
-                tileClassName={tileClassName}
-                showDoubleView={true} 
-            />
-      
-      
-      </div>
-    )}
+        
+                <div className='calendar-div'>
+                    <Calendar
+                        onChange={handleDateChange}
+                        value={dateRange}
+                        selectRange={true}
+                        tileDisabled={tileDisabled}
+                        tileClassName={tileClassName}
+                        showDoubleView={true} 
+                    />
+            
+                </div>
+        )}
     
       </div>
 
@@ -176,6 +177,7 @@ const StepTwo = ({ formData, handleChange, handleNext, handleBack }) => {
         <button type="submit" className='submit-button' disabled={isNextButtonDisabled()}>Next</button>
       </div>
     </form>
+    </div>
   );
 };
 

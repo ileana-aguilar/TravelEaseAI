@@ -21,7 +21,7 @@ const StepThree = ({ formData, setFormData, handleChange, handleNext, handleBack
       <div className='progress-bar-div'>
             <div className='progress-bar' style={{ width: '75%' }}></div>
         </div>
-        
+        <div className='step-three-content'>
         <div className='form-header'>
             <label className='when-label'>Who’s going with you?</label>
             <p>Choose one.</p>
@@ -55,6 +55,7 @@ const StepThree = ({ formData, setFormData, handleChange, handleNext, handleBack
             >
                 Family
             </button>
+        </div>
         </div>
       </div>
       <div className='form-buttons-div'>

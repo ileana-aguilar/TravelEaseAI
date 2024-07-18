@@ -12,9 +12,9 @@ const StepOne = ({ formData, handleChange, handleNext }) => {
             <div className='progress-bar' style={{ width: '25%' }}></div>
         </div>
         <label className='where-label'>Where do you want to go?</label>
-        <div className="input-wrapper">
+        <div className="form-input-wrapper">
             <IconSearch/>
-            <input className="search-input" type="text" name="destination" placeholder="City or Town" value={formData.destination} onChange={handleChange} required />
+            <input className="form-search-input" type="text" name="destination" placeholder="City or Town" value={formData.destination} onChange={handleChange} required />
         </div>
       </div>
       <div className='form-buttons-div'>

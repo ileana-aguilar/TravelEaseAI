@@ -253,6 +253,7 @@ margin-left: 1em;
     flex-direction: column;
     margin-top: 2em;
     margin-left: 1em;
+    padding-bottom: 13em;
   }
 
   textarea {
@@ -280,7 +281,7 @@ margin-left: 1em;
     flex-direction: column;
     margin-top: 2em;
     margin-left: 1em;
-    width: 100%;
+    width: 92%;
 }
 
 .travel-itinerary-div pre {
@@ -303,4 +304,78 @@ margin-left: 1em;
 
 .submit-button:hover{
     background-color: var(--dark-light-purple);
+}
+.form-input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--light-gray);
+    border-radius: 15px;
+    padding: 5px;
+    background-color: var(--light-gray);
+    width: 300px;
+    gap: 10px;
+  }
+
+  .form-input-icon {
+    margin-right: 5px;
+  }
+  
+  .form-search-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: var(--light-gray);
+  }
+
+
+@media (max-width: 430px) {
+    .form-buttons-div {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 6em;
+        border-top: 2px solid var(--dark-gray);
+        padding: 2em;
+        position: fixed;
+        right: 0;
+        bottom: 3em;
+        width: 84%;
+        background-color: var(--white);
+  }
+
+  .where-label {
+    font-size: 1.7em;
+  }
+
+  .form-input-wrapper { 
+    width: 73%;
+  }
+
+  .itineray-header h2{
+    font-size: 1.2em;
+  }
+
+  .selected-dates p{
+    font-size: .72em;
+    
+  }
+  .selected-dates {
+padding-left: 1em;
+padding-right: 0.06em;
+  }
+
+  .step-three-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-left: 1em;
+    flex-direction: column;
+    gap: 13px;
+    width: 70%;
+}
+
+.step-three-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 }

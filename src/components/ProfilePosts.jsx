@@ -63,7 +63,7 @@ const ProfilePosts = (props) => {
         <section>
             <div className="profile-header">
                 <IconEllipse alt="User icon" className="user-icon"/>
-                <div className="user-info">
+                <div className="profile-user-info">
                     <div className="user-details">
                         <span id="username">@{userId}</span>
                         {loggedInUserId === userId && (

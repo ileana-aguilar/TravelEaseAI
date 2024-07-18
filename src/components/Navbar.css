@@ -108,7 +108,65 @@ VerticalLine {
     list-style-type: none;
 }
 
-  a{
-    color: white;
+a{
+color: white;
+}
+
+@media (max-width: 900px) {
+    .navbar-menu {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: var(--light-purple);
+        z-index: 1000;
+    }
+  
+    .navbar-menu .logo {
+      display: block;
+      margin: 0 auto;
+      width: 150px; /* Adjust as needed */
+      padding: 10px 0; /* Add some padding for better spacing */
+    }
+  
+    .menu-guide {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        background-color: var(--light-purple);
+        flex-direction: row; /* Display in a row */
+        padding: 0.8em 0; /* Add some padding for better spacing */
+        margin: 0;
+    }
+    .menu-item{
+        padding: 0px;
+    }
+  
+    .menu-item span {
+      display: none;
+    }
+
+    .menu-item div{
+        display: none;
+      }
+    .horizontal-line-container .HorizontalLine {
+        display: none;
+    }
+
+    .user-info div{
+        display: none;
+    }
+
+    .navbar-menu .user-info{
+        display: none;
+    }
+    
+  
+    .main-content {
+      margin-top: 50px; /* Space for the fixed logo */
+      padding-bottom: 50px; /* Space for the fixed menu */
+    }
   }
 
+  

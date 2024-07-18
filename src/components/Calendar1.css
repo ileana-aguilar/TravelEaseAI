@@ -90,3 +90,21 @@
   background: none !important; /* Remove background */
   color: #ccc !important; /* Set a lighter color */
 }
+
+
+
+
+@media (max-width: 500px) {
+  .react-calendar__month-view__weekdays {
+    font-size: 0.1em;
+  }
+  .react-calendar__tile {
+    font-size: 0.7em;
+  }
+  .react-calendar--doubleView {
+    width: 352px;
+  }
+  .react-calendar__navigation__label {
+    font-size: 0.76em;
+  }
+}

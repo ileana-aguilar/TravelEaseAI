@@ -104,3 +104,20 @@
         margin-bottom: 10px; 
     }
 }
+
+@media (max-width: 500px) {
+    .feed-heading h1 {
+        font-size: 30px;
+    }
+    .new-post-button span{
+        display: none;
+    }
+    .feed-header {
+        flex-direction: row;
+        gap: 2em;
+    }
+
+    .feed-card-grid {
+        justify-content: center;
+    }
+}

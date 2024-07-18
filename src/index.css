@@ -37,15 +37,14 @@
 }
 
 .sidebar {
-  min-width: 304px;
-  max-width: 400px;
+
   background-color: var(--light-purple);
   z-index: 1000;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  padding: 15px 10px;
+  
   display: flex;
   flex-direction: column;
   
@@ -154,14 +153,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
- 
-  
-}
-button:focus,
-button:focus-visible {
-  
-}
+
 
 .login-sidebar {
   min-width: 304px;
@@ -269,4 +261,44 @@ button:focus-visible {
     max-width: 300px;
   }   
 
+}
+
+@media (max-width: 430px) {
+  .main-content {
+    padding-top: 1em;
+    padding-bottom: 60px; /* Space for the fixed menu */
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 420px;
+    height: 77%;
+  }
+  #root {
+    height: 100vh;
+    min-width: 285px;
+    max-width: 430px;
+  }
+  .sidebar {
+    min-width: 0px; 
+    max-width: 0px;
+    padding: 0px 0px;
+    }
+
+    .form-main-content {
+      width: 100%;
+      margin-left: 0em;
+      margin-right: 0em;
+      padding-top: 3em;
+    }
+}
+
+
+
+@media (max-width: 390px) {
+  .main-content {
+      margin-top: 4em;
+      padding-bottom: 60px;
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 349px;
+  }
 }
