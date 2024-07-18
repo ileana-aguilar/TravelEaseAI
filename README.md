@@ -1,6 +1,6 @@
 # TravelEase
 
-TravelEase is a React-based web application designed to help users share and manage their travel itineraries. The platform includes user authentication, post creation, updates, deletion, an interactive home feed with various features for enhanced user interaction and AI generated Itneraries.
+TravelEase is a React-based web application designed to help users share and manage their travel itineraries. The platform includes user authentication, post creation, updates, deletion, an interactive home feed with various features for enhanced user interaction and AI generated itneraries.
 
 ## Table of Contents
 - [Features](#features)
@@ -15,6 +15,7 @@ TravelEase is a React-based web application designed to help users share and man
   - Like and comment on posts
   - Sort posts by time
   - Search posts by title
+- **AI generated itneraries**: Creates travel itneraries based on user's preferences.
 - **Backend Management**: Utilizes PostgreSQL for data handling and scalability.
 
 ## Technologies Used
