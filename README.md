@@ -21,7 +21,7 @@ TravelEase is a React-based web application designed to help users share and man
 
 - **Frontend**: React
 - **Design**: Figma
-- **Backend**: PostgreSQL(supabase)
+- **Backend**: PostgreSQL(supabase), Openai Api
 
 # Here's how TravelEase looks
 <a href="https://www.figma.com/design/Dr1w7mHOvZfxOw1Dd4RxTo/Untitled?node-id=0-1&t=9emaJbgFH2z1Tw22-1">
