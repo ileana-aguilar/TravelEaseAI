@@ -1,28 +1,54 @@
 # TravelEase
-TravelEase provide users to the ability to share their recent travels with other user. 
 
-**The following **required** functionality is completed:**
-- [x] Users can go to a create form that allows the user to create posts
-- [x] There is a home feed displaying previously created posts
-- [x] Users can view posts in different ways
-- [x] Users can interact with each post in different ways
-- [x] A post that a user previously created can be edited or deleted from its post page
+TravelEase is a React-based web application designed to help users share and manage their travel itineraries. The platform includes user authentication, post creation, updates, deletion, an interactive home feed with various features for enhanced user interaction and AI generated Itneraries.
 
-**The following **optional** functionality are implemented:**
-- [x] Website implements pseudo-authentication
+## Table of Contents
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Demo](#heres-how-travelease-looks)
+- [Getting Started](#getting-started)
+## Features
+
+- **User Authentication**: Sign-in and signup functionality.
+- **Post Management**: Create, update, and delete travel itinerary posts.
+- **Interactive Home Feed**: 
+  - Like and comment on posts
+  - Sort posts by time
+  - Search posts by title
+- **Backend Management**: Utilizes PostgreSQL for data handling and scalability.
+
+## Technologies Used
+
+- **Frontend**: React
+- **Design**: Figma
+- **Backend**: PostgreSQL(supabase)
+
+# Here's how TravelEase looks
+<a href="https://www.figma.com/design/Dr1w7mHOvZfxOw1Dd4RxTo/Untitled?node-id=0-1&t=9emaJbgFH2z1Tw22-1">
+  <p> TravelEase Figma Design File - Click here!</p>
+</a>
+
+<a href="https://travelease1.netlify.app/">
+  <p> TravelEase Website - Click here!</p>
+</a>
+
+<a href="https://travelease1.netlify.app/">
+    <img src="src/assets/TravelEaseScreenshot.png" width="400">
+</a>
 
 
-# Here's how TravelEase looks:
-
-<div>
-    <a href="https://www.loom.com/share/6839227b01d146fbb6459f1e1130d58c?sid=0263a1d7-e8d9-4684-bc71-f7b9205c42d3">
-      <p> TravelEase Demo - Watch Video</p>
-    </a>
-   
-  </div>
 
 # Getting started
-**Install dependencies**
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/ileana-aguilar/TravelEaseAI.git
+   cd travelease
+
+3. **Create a supabase account**
+   - add your api key to client.js
+   
+5. **Install dependencies**
 ```
 npm install
 ```
