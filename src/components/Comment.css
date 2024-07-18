@@ -1,30 +1,49 @@
-.comment-container{
+.comment-container {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin-top: 20px;
 }
-.comment-info{
+
+.comment-info {
     display: flex;
     gap: 10px;
     align-items: center;
-
-
 }
-.comment-user{
+
+.comment-user {
     display: flex;
     gap: 10px;
     align-items: center;
-
 }
 
-.comment-user:hover{
+.comment-user:hover {
     color: var(--dark-blue);
     cursor: pointer;
     text-decoration: underline;
 }
 
-.comment-text{
+.comment-text {
     margin-top: -15px;
     margin-left: 50px;
+}
+
+.more-info {
+    background-color: var(--white);
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.report-button {
+    background-color: var(--dark-gray);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
 }

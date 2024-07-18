@@ -2,7 +2,7 @@
 
   width: 100%;
   /*margin-right: 6em;*/
-min-width: 100vh;
+/*min-width: 100vh;*/
  /* margin: 0 auto;*/
   /*padding: 2rem;*/
   /*text-align: center;*/
@@ -52,4 +52,53 @@ min-width: 100vh;
 
 .read-the-docs {
   color: #888;
+}
+
+@media (max-width: 1024px) {
+  .app-container {
+    display: block;
+    width: 100%;
+  }
+
+  .login-sidebar {
+    position: relative;
+    /* width: 100%; */
+    min-width: 285px;
+    max-width: 1024px;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .authentication-main-content {
+    margin-top: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .authentication {
+    min-width: 15em; 
+    /* max-width: 40em; */
+    margin: 0;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #root {
+    height: 100vh;
+    min-width: 285px;
+    max-width: 1024px;
+  }
 }

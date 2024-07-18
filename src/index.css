@@ -74,6 +74,7 @@
     width: 100vh;
     margin-left: 22em;
     margin-right: 1em;
+   
   /*grid-column: 2 / 3;
   grid-row: 1 / 2;
   display: flex;
@@ -100,9 +101,10 @@
   flex-grow: 1; 
     width: 100%;
     width: 100vh;
-    margin-top: 3em;
-    margin-left: 25em;
-    margin-right: 2em;
+    margin-top: 7em;
+    margin-left: 30em;
+    margin-right: 7em;
+
   
   /*grid-column: 2 / 3;
   grid-row: 1 / 2;
@@ -121,13 +123,20 @@ a:hover {
   color: #535bf2;
 }
 
-body {
+body, html {
+  width: 100%;
+  height: 100%;
   margin: 0;
+  padding: 0;
+}
+
+body {
   display: flex;
-  place-items: center;
+  
   min-width: 320px;
   min-height: 100vh;
 }
+
 
 h1 {
   font-size: 3.2em;
@@ -154,6 +163,20 @@ button:focus-visible {
   
 }
 
+.login-sidebar {
+  min-width: 304px;
+  max-width: 400px;
+  background-color: var(--light-purple);
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -165,4 +188,85 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+@media (max-width: 1024px) {
+  .app-container {
+    display: block;
+    width: 100%;
+  }
+
+  .login-sidebar {
+    position: relative;
+    /* width: 100%; */
+    min-width: 285px;
+    max-width: 1024px;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3em;
+  }
+
+  .authentication-main-content {
+    margin-top: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    /* width: 100%; */
+    /* justify-content: center; */
+    /* align-items: baseline; */
+    /* display: flex; */
+    margin: 0 auto;
+    min-width: 20px;
+    max-width: 431px;
+}
+
+  .authentication {
+    min-width: 15em; 
+    /* max-width: 40em; */
+    margin: 0;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #root {
+    height: 100vh;
+    min-width: 285px;
+    max-width: 1024px;
+  }
+
+  .main-content {
+    flex-grow: 1; 
+      padding: 20px; 
+      width: 100%;
+      margin-left: 5em;
+      width: 100vh;
+      margin-left: 22em;
+      margin-right: 1em;
+      margin-top: 0em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .authentication-main-content {
+    
+    /* width: 100%; */
+    /* justify-content: center; */
+    /* align-items: baseline; */
+    /* display: flex; */
+    margin: 0 auto;
+    min-width: 20px;
+    max-width: 300px;
+  }   
+
 }

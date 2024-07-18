@@ -60,7 +60,7 @@ function App() {
             ) : (
                 
                 <div className="app-container">
-                    <div className="sidebar">
+                    <div className="login-sidebar">
                         <img className="logo" src={logo} width="300px" alt="Travel Ease Logo" />
                     </div>
                     <div className="authentication-main-content">
